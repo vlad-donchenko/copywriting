@@ -1,0 +1,110 @@
+@import "../global/variables";
+
+.reviews {
+  margin-top: 234px;
+}
+
+.reviews__wrap {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    width: 434px;
+    height: 398px;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: -68px;
+    left: -109px;
+    background-image: url("../img/slider-decor-1.svg");
+  }
+
+  &::after {
+    bottom: -57px;
+    left: 377px;
+    background-image: url("../img/slider-decor-2.svg");
+  }
+}
+
+.reviews__slider {
+  margin-left: -16px;
+  margin-right: -16px;
+  height: 470px;
+}
+
+.reviews__item {
+  position: relative;
+}
+
+.reviews__avatar {
+  line-height: 0;
+}
+
+.reviews__avatar svg {
+  width: 124px;
+  height: 93px;
+}
+
+.reviews__content {
+  display: flex;
+  flex-direction: column;
+  width: 535px;
+  height: 320px;
+  margin: 20px 20px 20px auto;
+  padding: 30px 40px;
+  background-color: @white-color;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(@black-color, 0.05);
+  transition: @animation-duration + 0.2s width, height @timing-function;
+}
+
+.reviews__text {
+  width: 420px;
+  height: 60px;
+  margin-top: 21px;
+  margin-bottom: 0;
+  overflow: hidden;
+  font-size: @base-font-size - 2px;
+  line-height: @base-line-height - 4px;
+  letter-spacing: @base-letter-spacing;
+}
+
+.reviews__author {
+  margin-top: auto;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: @base-font-size - 2px;
+  color: @black-color;
+}
+
+.slick-current .reviews__content {
+  padding: 40px 50px;
+  width: 620px;
+  height: 370px;
+  background-color: @aqua-color;
+  background-image: @aqua-gradient;
+  margin-left: 20px;
+  margin-bottom: 70px;
+  box-shadow: 20px 50px 30px rgba(39, 148, 158, 0.2);
+}
+
+.slick-current .reviews__text {
+  margin-top: 31px;
+  font-size: @base-font-size;
+  line-height: @base-line-height - 2px;
+  color: @white-color;
+  height: 110px;
+  width: 530px;
+}
+
+.slick-current .reviews__author {
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  color: @white-color;
+}

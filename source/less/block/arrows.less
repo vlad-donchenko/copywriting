@@ -1,0 +1,63 @@
+@import "../global/variables";
+
+.arrows__counter--hidden {
+  display: none;
+}
+
+.arrows {
+  position: relative;
+  top: -11px;
+  width: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arrows__counter {
+  padding-left: 37px;
+  padding-right: 37px;
+  font-size: @base-font-size + 5px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.arrows button {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 43px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: @yellow-light-color;
+  transform: translateY(-50%);
+  transition: all @animation-duration @timing-function;
+
+  &:hover {
+    color: @orange-color;
+  }
+
+  &:focus {
+    outline: none;
+
+    .arrows__icon {
+      width:  45px;
+      height: 45px;
+    }
+  }
+}
+
+.arrows__prev {
+  left: 0;
+}
+
+.arrows__next {
+  right: 5px;
+}
+
+.arrows__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

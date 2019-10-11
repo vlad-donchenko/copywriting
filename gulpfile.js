@@ -89,10 +89,11 @@ gulp.task("html", function () {
 gulp.task("js-minify", function () {
   return gulp.src([
     "source/libs/jq/jquery-3.3.1.min.js",
+    "source/libs/slick/slick.min.js",
     "source/js/*.js"
   ])
     .pipe(concat("scripts.min.js"))
-    .pipe(jsmin())
+    /*.pipe(jsmin())*/
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
