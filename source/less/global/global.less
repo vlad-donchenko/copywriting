@@ -1,0 +1,31 @@
+@import "../global/variables";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+
+  * {
+    box-sizing: inherit;
+
+    *::after {
+      box-sizing: inherit;
+    }
+
+    *::before {
+      box-sizing: inherit;
+    }
+  }
+}
+
+body {
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  letter-spacing: @base-letter-spacing;
+  line-height: @base-line-height;
+  font-weight: 300;
+  background-color: @white-color;
+}
+
+img {
+  max-width: 100%;
+}

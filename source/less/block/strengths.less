@@ -1,0 +1,69 @@
+@import "../global/variables";
+
+.strengths {
+  margin-top: 100px;
+}
+
+.strengths__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 7px;
+  margin: 0;
+  list-style: none;
+  z-index: 1;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: -54px;
+    right: -12px;
+    width: 1405px;
+    height: 439px;
+    background-image: url("../img/laptop-background.svg");
+    background-size: contain;
+    z-index: -2;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 145px;
+    right: 149px;
+    width: 256px;
+    height: 200px;
+    background-image: url("../img/laptop.svg");
+    background-size: contain;
+  }
+}
+
+.strengths__item p {
+  font-size: @base-font-size - 1px;
+  line-height: @base-line-height - 2px;
+  letter-spacing: @base-letter-spacing;
+}
+
+.strengths__item .strengths__title {
+  margin: 0 0 20px 0;
+  font-size: @base-font-size + 5px;
+  line-height: @base-line-height + 2px;
+  letter-spacing: normal;
+  font-weight: 600;
+  color: @orange-color;
+}
+
+.strengths__item {
+  width: 367px;
+  margin-right: 65px;
+  margin-bottom: 46px;
+
+  &:nth-last-child(1),
+  &:nth-last-child(2),
+  &:nth-last-child(3) {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}

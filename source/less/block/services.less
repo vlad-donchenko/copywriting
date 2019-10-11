@@ -1,0 +1,73 @@
+@import "../global/variables";
+
+.services {
+  margin-top: 243px;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 5px;
+  list-style: none;
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.services__item--start {
+  width: 392px;
+  padding-right: 40px;
+}
+
+.services__item--center {
+  width: 436px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-left: 3px solid @gray-color;
+  border-right: 3px solid @gray-color;
+}
+
+.services__item--end {
+  width: 443px;
+  padding-left: 40px;
+  padding-right: 100px;
+}
+
+.services__item p {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: @base-font-size;
+  line-height: @base-line-height - 4px;
+  letter-spacing: @base-letter-spacing - 0.02em;
+  color: @black-color;
+}
+
+.services__item .services__name {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: @base-font-size + 5px;
+  line-height: @base-line-height + 2px;
+  letter-spacing: normal;
+  font-weight: 500;
+  color: @black-color;
+}
+
+.services__info-block {
+  flex-grow: 1;
+}
+
+.services__item--top {
+  padding-bottom: 60px;
+  border-bottom: 3px solid @gray-color;
+}
+
+.services__item--bottom {
+  padding-top: 60px;
+}
+
+.services__order {
+  margin-top: 29px;
+}

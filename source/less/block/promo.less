@@ -1,0 +1,35 @@
+@import "../global/variables";
+
+.promo__inner {
+  position: relative;
+  padding-top: 284px;
+  padding-bottom: 230px;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 104px;
+    right: -6px;
+    width: 721px;
+    height: 665px;
+    background-image: url("../img/girl.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.promo__left {
+  width: 540px;
+  padding-left: 4px;
+}
+
+.promo__left p {
+  font-size: @base-font-size;
+  line-height: @base-line-height - 2px;
+  letter-spacing: @base-letter-spacing;
+  color: @black-color;
+
+  &:first-of-type {
+    margin-bottom: 0;
+  }
+}
