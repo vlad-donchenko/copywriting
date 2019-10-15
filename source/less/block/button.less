@@ -40,12 +40,18 @@
   }
 
   &:focus {
+    outline: none;
     background-color: @orange-color;
 
     &::after {
       opacity: 0;
     }
   }
+}
+
+.button[type="button"],
+.button[type="submit"] {
+  border: none;
 }
 
 .button--services {
@@ -56,7 +62,6 @@
 .button--about-services {
   padding-left: 40px;
   padding-right: 40px;
-  margin: 405px auto 0 auto;
 }
 
 .button--consultation {
@@ -80,4 +85,15 @@
   position: absolute;
   top: 21px;
   right: 37px;
+}
+
+.button--submit-modal {
+  width: 220px;
+}
+
+@media (max-width: @ipad-pro) {
+.button--request {
+  padding-left: 25px;
+  padding-right: 25px;
+}
 }

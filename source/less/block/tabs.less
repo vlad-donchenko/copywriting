@@ -11,7 +11,7 @@
 }
 
 .tabs__link {
-  margin-right: 35px;
+  margin: 10px 35px 10px 0;
   padding-left: 35px;
   padding-right: 35px;
   color: @aqua-color;
@@ -53,4 +53,12 @@
 .tabs__wrap {
   display: flex;
   flex-wrap: wrap;
+  margin: -10px 0;
+}
+
+@media (max-width: @tablet) {
+  .tabs__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }

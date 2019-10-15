@@ -42,12 +42,43 @@
 
 .about-services__right {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 256px;
   margin-right: 23px;
+  padding-top: 403px;
   padding-bottom: 31px;
   margin-left: auto;
   background-image: url("../img/bag-background.svg");
   background-size: 256px 236px;
   background-position: -5px 113px;
   background-repeat: no-repeat;
+}
+
+@media (max-width: @ipad-pro) {
+  .about-services__left {
+    margin-left: 0;
+    max-width: 590px;
+    width: 100%;
+  }
+}
+
+@media (max-width: @tablet) {
+  .about-services__left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-services__inner {
+    flex-wrap: wrap;
+  }
+
+  .about-services__right {
+    margin: 40px 0 0 0;
+    padding: 0;
+    background: transparent;
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
 }

@@ -61,3 +61,44 @@
   border-radius: 50%;
   max-height: 500px;
 }
+
+@media (max-width: @ipad-pro) {
+  .about-me__right {
+    width: 410px;
+  }
+
+  .about-me__circle--middle {
+    left: 0;
+    top: 36px;
+  }
+
+  .about-me__left {
+    min-height: auto;
+    height: 528px;
+  }
+
+  .about-me__inner {
+    margin-top: 100px;
+  }
+
+  .about-me__right h5 {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: @tablet) {
+  .about-me__inner {
+    flex-wrap: wrap;
+  }
+
+  .about-me__left {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-me__right {
+    width: 100%;
+    margin-top: 90px;
+  }
+}

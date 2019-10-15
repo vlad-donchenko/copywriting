@@ -1,0 +1,121 @@
+@import "../global/variables";
+
+.modal {
+  position: fixed;
+  display: none;
+  padding: 50px 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(@black-color, 0.2);
+  z-index: 15;
+}
+
+.modal--open {
+  display: flex;
+}
+
+.modal__content {
+  position: relative;
+  padding: 150px 222px 211px 222px;
+  max-width: 947px;
+  width: 100%;
+  background-color: @white-color;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(@black-color, 0.25);
+}
+
+.modal__input {
+  height: 40px;
+  width: 100%;
+  max-width: 220px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: @black-color;
+  background: #f6fbfb;
+  border: 1px solid @aqua-light;
+  border-radius: 4px;
+  transition: background-color @animation-duration @timing-function;
+
+  &:focus {
+    outline: none;
+    background-color: @white-color;
+  }
+}
+
+.modal__item {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.modal__item--submit {
+  margin-top: 30px;
+}
+
+.modal__close {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  padding: 0;
+  margin-left: 15px;
+  margin-top: 15px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  transition: opacity @animation-duration @timing-function;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: relative;
+    display: block;
+    height: 4px;
+    min-width: 31px;
+    background-color: @white-color;
+    border-radius: 5px;
+  }
+
+  &::before {
+    top: 2px;
+    left: -5px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    top: -2px;
+    left: -5px;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.3;
+  }
+}
+
+.modal__input::placeholder {
+  color: #a9d5d6;
+}
+
+@media (max-width: @ipad-pro) {
+  .modal__content {
+    max-width: 768px;
+    padding: 120px 100px;
+  }
+}
+
+@media (max-width: @tablet) {
+  .modal__content {
+    max-width: 568px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}

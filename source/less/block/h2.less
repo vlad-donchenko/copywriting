@@ -33,3 +33,33 @@
   margin-top: 0;
   margin-bottom: 51px;
 }
+
+.h2--modal {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@media (max-width: @ipad-pro) {
+  .h2 {
+    line-height: normal;
+    font-size: @base-font-size * 2.5;
+  }
+
+  .h2--about-me,
+  .h2--reviews,
+  .h2--consultation,
+  .h2--modal {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: @tablet) {
+  .h2 {
+    font-size: @base-font-size * 2 - 6px;
+  }
+
+  .h2--about-me {
+    text-align: center;
+  }
+}

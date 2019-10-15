@@ -1,3 +1,10 @@
+var NAVBAR_HEIGHT = 56;
+var ESC_KEYCODE = 27;
+var closeModal = $('.modal__close');
+var modal = $('.modal');
+var menuButton = $('.menu__toggle');
+var menu = $('.menu--header');
+
 $(document).ready(function(){
 
   $('.tabs__wrap .tabs__link').click(function(evt){
@@ -27,12 +34,11 @@ $('#reviews_slider').slick({
   nextArrow: $('.reviews__next'),
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1320,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         infinite: true,
-        dots: true
       }
     },
     {
@@ -71,7 +77,6 @@ var countSliderOdd = function (slide) {
 
   if (slide === 0) {
     $('.arrows__counter').text( slideNumber);
-    console.log('Потому что начало');
   } else {
     $('.arrows__counter').text(slideNumber);
   }
@@ -84,3 +89,52 @@ $('#reviews_slider').on('afterChange', function(event, slick, currentSlide){
     countSliderOdd(currentSlide);
   }
 });
+
+var onAnimateScrollClick = function () {
+  var elementClick = $(this).attr("href");
+  var destination = $(elementClick).offset().top - NAVBAR_HEIGHT;
+  $("html:not(:animated),body:not(:animated)").animate({
+    scrollTop: destination
+  }, 800);
+  return false;
+};
+
+var onFixedMenu = function () {
+  if ($(this).scrollTop() > NAVBAR_HEIGHT) {
+    $('.site-header').addClass('site-header--fixed');
+  } else if ($(this).scrollTop() <= NAVBAR_HEIGHT) {
+    $('.site-header').removeClass('site-header--fixed');
+  }
+};
+
+$('.menu__link').on('click', onAnimateScrollClick);
+$(window).on('scroll', onFixedMenu);
+
+var ModalButton = $('.button--call-modal');
+
+var onCloseModal = function () {
+  modal.removeClass('modal--open');
+};
+
+var oncloseModalPress = function (evt) {
+  if(evt.keyCode === ESC_KEYCODE && !$(evt.target).is('.modal__input')) {
+    onCloseModal();
+    $(document).off('keydown', oncloseModalPress);
+  }
+};
+
+var onModalOpenClick = function (evt) {
+  evt.preventDefault();
+  var modalElement = $(this).attr("href");
+  $(modalElement).addClass('modal--open');
+
+  closeModal.on('click', onCloseModal);
+  $(document).on('keydown', oncloseModalPress);
+};
+
+var onMenuOpenClick = function () {
+  menu.toggleClass('menu--open');
+};
+
+ModalButton.on('click', onModalOpenClick);
+menuButton.on('click', onMenuOpenClick)

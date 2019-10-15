@@ -34,6 +34,7 @@
     height: 200px;
     background-image: url("../img/laptop.svg");
     background-size: contain;
+    z-index: -1;
   }
 }
 
@@ -65,5 +66,35 @@
 
   &:nth-child(3n) {
     margin-right: 0;
+  }
+}
+
+@media (max-width: @ipad-pro) {
+  .strengths__item:nth-child(3n) {
+    margin-right: 65px;
+  }
+
+  .strengths__item:nth-last-child(2) {
+    margin-bottom: 46px;
+  }
+
+  .strengths__list::after {
+    top: inherit;
+    bottom: 0;
+    right: 20px;
+  }
+}
+
+@media (max-width: @tablet) {
+  .strengths__item {
+    width: 290px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .strengths__list::after {
+    right: 100px;
   }
 }

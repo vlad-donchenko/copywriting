@@ -15,43 +15,50 @@
   <include src="build/img/sprite.svg"></include>
 </div>
 <header class="site-header">
-  <div class="container site-header__inner">
-    <div class="logo logo--header">
-      <img src="img/logo.svg" width="151" height="55" alt="Логотип">
-    </div>
-    <nav class="menu menu--header">
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="#" class="menu__link" data-name="Немного обо мне">
-            Немного обо мне
-          </a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" data-name="Портфолио">
-            Портфолио
-          </a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" data-name="Отзывы">
-            Отзывы
-          </a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" data-name="Цены">
-            Цены
-          </a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link" data-name="Контакты">
-            Контакты
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div class="site-header__request">
-      <a href="#" class="button">
-        Оставить заявку
-      </a>
+  <div class="site-header__wrap">
+    <div class="container site-header__inner">
+      <div class="logo logo--header">
+        <img src="img/logo.svg" width="151" height="55" alt="Логотип">
+      </div>
+      <nav class="menu menu--header">
+        <button type="button" class="menu__toggle" aria-label="открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#about_me" class="menu__link" data-name="Немного обо мне">
+              Немного обо мне
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#portfolio" class="menu__link" data-name="Портфолио">
+              Портфолио
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#reviews" class="menu__link" data-name="Отзывы">
+              Отзывы
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#price" class="menu__link" data-name="Цены">
+              Цены
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#footer" class="menu__link" data-name="Контакты">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="site-header__request">
+        <a href="#request_modal" class="button button--request button--call-modal">
+          Оставить заявку
+        </a>
+      </div>
     </div>
   </div>
 </header>
@@ -69,7 +76,7 @@
       </article>
     </div>
   </section>
-  <section class="about-me">
+  <section class="about-me" id="about_me">
     <div class="container about-me__inner">
       <div class="about-me__left">
         <div class="about-me__circle about-me__circle--large"></div>
@@ -386,7 +393,7 @@
       </div>
     </div>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="container portfolio__inner">
       <div class="portfolio__info-block">
         <h2 class="h2 h2--portfolio">
@@ -649,7 +656,7 @@
       </div>
     </div>
   </section>
-  <section class="reviews">
+  <section class="reviews" id="reviews">
     <div class="container reviews__inner">
       <h2 class="h2 h2--reviews">
         Отзывы
@@ -1119,13 +1126,14 @@
       </div>
     </div>
   </section>
-  <section class="price">
+  <section class="price" id="price">
     <div class="container price__inner">
       <h2 class="h2 h2--price">
         Стоимость текстов
       </h2>
       <p class="price__description">
-        Оплата двумя способами: сдельная за проект или фиксированная за объем. Если вы уже знаете, что вам нужно, смотрите цены ниже.
+        Оплата двумя способами: сдельная за проект или фиксированная за объем. Если вы уже знаете, что вам нужно,
+        смотрите цены ниже.
       </p>
       <ul class="price__list">
         <li class="price__item">
@@ -1327,72 +1335,168 @@
               <label for="consultation_questions" class="visually-hidden">
                 Ваша почта:
               </label>
-              <input type="text" class="consultation__input" name="consultation_questions" id="consultation_questions" placeholder="Напишите свой вопрос">
-              <button type="button" class="button button--consultation" aria-label="Открыть попап">
+              <input type="text" class="consultation__input" name="consultation_questions" id="consultation_questions"
+                     placeholder="Напишите свой вопрос">
+              <a href="#" class="button button--consultation" aria-label="Открыть попап">
                 <svg width="30" height="30">
                   <use xlink:href="#icon-consultation"></use>
                 </svg>
-              </button>
+              </a>
+            </div>
+            <div class="modal modal--consultation">
+              <div class="modal__content">
+                <h2 class="h2 h2--modal">
+                  Отправить вопрос
+                </h2>
+                <p class="modal__item">
+                  <label for="consultation_email" class="visually-hidden">
+                    Ваш E-mail
+                  </label>
+                  <input type="email" name="consultation_name" class="modal__input" id="consultation_email" placeholder="Ваш E-mail">
+                </p>
+                <p class="modal__item modal__item--submit">
+                  <button type="submit" class="button button--submit-modal">
+                    Отправить
+                  </button>
+                </p>
+                <button type="button" class="modal__close" aria-label="Закрыть окно"></button>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </div>
   </section>
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__menu">
-        <h5 class="h5">
-          Меню
-        </h5>
-        <ul class="site-footer__menu">
-          <li>
-            <a href="#">
+</main>
+<footer class="site-footer" id="footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__navigation">
+      <h5 class="h5 h5--site-footer">
+        Меню
+      </h5>
+      <div class="menu menu--site-footer">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Немного обо мне">
               Немного обо мне
             </a>
           </li>
-          <li>
-            <a href="#">
-              Темы
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Преимущества
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Качество текста
-            </a>
-          </li>
-        </ul>
-        <ul class="site-footer__sub-menu">
-          <li>
-            <a href="#">
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Портфолио">
               Портфолио
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Темы">
+              Темы
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Отзывы">
               Отзывы
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Преимущества">
+              Преимущества
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Цены">
               Цены
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Качество текста">
+              Качество текста
+            </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link" data-name="Консультация">
               Консультация
             </a>
           </li>
         </ul>
       </div>
     </div>
-  </footer>
-</main>
+    <div class="site-footer__inform">
+      <h5 class="h5 h5--site-footer">
+        Контакты
+      </h5>
+      <ul class="site-footer__contacts">
+        <li>
+          <a href="mailto:textkaktext@gmail.com">
+            <svg width="20" height="20">
+              <use xlink:href="#icon-email"></use>
+            </svg>
+            textkaktext@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="tal:380968404137">
+            <svg width="20" height="20">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
+            38 (096) 84 04 137
+          </a>
+        </li>
+      </ul>
+      <div class="social social--footer">
+        <p class="social__text">
+          Мой авторский материал легко найти на странице на Фейсбук
+        </p>
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="" target="_blank" aria-label="Телеграм">
+              <svg width="35" height="35">
+                <use xlink:href="#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="" target="_blank" aria-label="Вотсап">
+              <svg width="35" height="35">
+                <use xlink:href="#icon-whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="" target="_blank" aria-label="Фейсбук">
+              <svg width="35" height="35">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="modal modal--request" id="request_modal">
+  <div class="modal__content">
+    <h2 class="h2 h2--modal">
+      Оформление заявки
+    </h2>
+    <p class="modal__item">
+      <label for="request_name" class="visually-hidden">
+        Имя
+      </label>
+      <input type="email" name="request_name" class="modal__input" id="request_name" placeholder="Имя">
+    </p>
+    <p class="modal__item">
+      <label for="request_phone" class="visually-hidden">
+        Имя
+      </label>
+      <input type="tel" name="request_phone" class="modal__input" id="request_phone" placeholder="Имя">
+    </p>
+    <p class="modal__item modal__item--submit">
+      <button type="submit" class="button button--submit-modal">
+        Отправить
+      </button>
+    </p>
+    <button type="button" class="modal__close" aria-label="Закрыть окно"></button>
+  </div>
+</div>
 <script src="js/scripts.min.js"></script>
 </body>
 </html>

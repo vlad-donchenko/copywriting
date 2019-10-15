@@ -21,6 +21,10 @@
   letter-spacing: normal;
 }
 
+.arrows__icon {
+  transition: width @animation-duration @timing-function;
+}
+
 .arrows button {
   position: absolute;
   top: 50%;
@@ -31,7 +35,6 @@
   padding: 0;
   color: @yellow-light-color;
   transform: translateY(-50%);
-  transition: all @animation-duration @timing-function;
 
   &:hover {
     color: @orange-color;
@@ -41,7 +44,7 @@
     outline: none;
 
     .arrows__icon {
-      width:  45px;
+      width: 45px;
       height: 45px;
     }
   }

@@ -1,0 +1,130 @@
+@import "../global/variables";
+
+.site-footer {
+  position: relative;
+  margin-top: 291px;
+  padding-bottom: 122px;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 121px;
+    display: block;
+    width: 215px;
+    height: 531px;
+    z-index: -1;
+  }
+
+  &::before {
+    left: 0;
+    background-image: url("../img/decor-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    right: 0;
+    background-image: url("../img/decor-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.site-footer__navigation {
+  width: 479px;
+  padding-left: 5px;
+}
+
+.site-footer__inner {
+  display: flex;
+}
+
+.site-footer__inform {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-bottom: 51px;
+  width: 585px;
+  margin-left: auto;
+  margin-right: 39px;
+}
+
+.site-footer__contacts {
+  width: 245px;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.site-footer__contacts a {
+  position: relative;
+  display: inline-block;
+  padding-left: 35px;
+  color: @black-color;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  letter-spacing: @base-letter-spacing;
+  text-decoration: none;
+}
+
+.site-footer__contacts svg {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.site-footer__contacts li {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: @ipad-pro) {
+  .site-footer__navigation {
+    width: 380px;
+  }
+
+  .site-footer__inform {
+    margin-right: 0;
+    width: 500px;
+  }
+
+  .site-footer {
+    margin-top: 170px;
+    padding-bottom: 100px;
+  }
+
+  .site-footer::after,
+  .site-footer::before {
+    bottom: 0;
+    width: 170px;
+    height: 423px;
+  }
+}
+
+@media (max-width: @tablet) {
+  .site-footer__navigation {
+    margin: 0 30px 0 68px;
+    padding-left: 0;
+    width: 185px;
+  }
+
+  .site-footer__inform {
+    width: 237px;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .site-footer__contacts {
+    width: 100%;
+  }
+
+  .site-footer {
+    padding-bottom: 50px;
+  }
+}

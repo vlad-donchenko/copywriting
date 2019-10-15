@@ -24,8 +24,18 @@ body {
   line-height: @base-line-height;
   font-weight: 300;
   background-color: @white-color;
+  background-image: url("../img/decor-top-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
 }
 
 img {
   max-width: 100%;
+}
+
+@media (max-width: @ipad-pro) {
+  body {
+    background-size: 150px 150px;
+  }
 }

@@ -71,3 +71,37 @@
 .services__order {
   margin-top: 29px;
 }
+
+@media (max-width: @ipad-pro) {
+  .services {
+    margin-top: 100px;
+  }
+
+  .services__item {
+    width: 50%;
+    padding: 40px;
+    border-bottom: 3px solid @gray-color;
+  }
+
+  .services__item:nth-child(odd) {
+    border-right: 3px solid @gray-color;
+    border-left: none;
+  }
+
+  .services__item:nth-child(even) {
+    border-left: none;
+    border-right: none;
+  }
+
+  .services__item:nth-last-child(1),
+  .services__item:nth-last-child(2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: @tablet) {
+  .services__item .services__name {
+    font-size: @base-font-size + 2px;
+    line-height: normal;
+  }
+}
