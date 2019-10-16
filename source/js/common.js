@@ -121,6 +121,8 @@ $(window).on('scroll', onFixedMenu);
 
 var onCloseModal = function () {
   modal.removeClass('modal--open');
+  $('body').removeClass('overflow-modal');
+  $('.site-header--fixed').removeClass('site-header--modal');
   $(document).off('keydown', oncloseModalPress);
   $(document).off('click', onCloseModalBackgroundClick);
 };
@@ -143,7 +145,8 @@ var onModalOpenClick = function (evt) {
   evt.preventDefault();
   var modalElement = $(this).attr("href");
   $(modalElement).addClass('modal--open');
-
+  $('body').addClass('overflow-modal');
+  $('.site-header--fixed').addClass('site-header--modal');
   closeModal.on('click', onCloseModal);
   $(document).on('keydown', oncloseModalPress);
   $(document).on('click', onCloseModalBackgroundClick);

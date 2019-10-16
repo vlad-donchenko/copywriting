@@ -49,6 +49,10 @@
   }
 }
 
+.site-header--modal .site-header__wrap {
+  padding-right: 17px;
+}
+
 @keyframes navbarfiexd {
   0% {
     transform: translateY(-100%);
@@ -70,6 +74,10 @@
   .site-header__request {
     width: 185px;
     text-align: right;
+  }
+
+  .site-header--modal .site-header__wrap {
+    padding-right: 0;
   }
 }
 
@@ -132,7 +140,7 @@
     width: 100%;
     background-color: @white-color;
     z-index: 10;
-    height: 100vh;
+    height: 100%;
     overflow-y: auto;
   }
 
@@ -162,6 +170,8 @@
 
   .site-header--menu-open .site-header__request {
     display: block;
+    padding-top: 0;
+    margin-bottom: 20px;
   }
 
   .site-header--fixed .site-header__menu-toggle {

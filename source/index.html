@@ -84,6 +84,7 @@
         <div class="about-me__circle about-me__circle--middle"></div>
         <div class="about-me__circle about-me__circle--small"></div>
         <picture>
+          <source type="image/webp" srcset="img/about-us.webp">
           <img src="img/about-us.jpg" width="501" height="500" alt="Мое фото">
         </picture>
       </div>
@@ -108,7 +109,7 @@
       </article>
     </div>
   </section>
-  <section class="services">
+  <section class="services" id="services">
     <div class="container services__inner">
       <h4 class="h4 h4--services">
         Пишу легко и с удовольствием
@@ -209,7 +210,7 @@
       </ul>
     </div>
   </section>
-  <section class="benefits">
+  <section class="benefits" id="benefits">
     <div class="container benefits__inner">
       <div class="benefits__left">
         <div class="benefits__info">
@@ -343,7 +344,7 @@
       </ul>
     </div>
   </section>
-  <section class="about-services">
+  <section class="about-services" id="about-services">
     <div class="container about-services__inner">
       <div class="about-services__left">
         <h4 class="h4 h4--about-services">
@@ -388,7 +389,7 @@
         </p>
       </div>
       <div class="about-services__right">
-        <a href="#" class="button button--about-services">
+        <a href="https://drive.google.com/open?id=1xaGooU3m0j-NkojQHtrr0KCOB1I2M5yI" class="button button--about-services" target="_blank">
           Посмотреть кейс
         </a>
       </div>
@@ -996,7 +997,7 @@
       </ul>
     </div>
   </section>
-  <section class="consultation">
+  <section class="consultation" id="consultation">
     <div class="container consultation__inner">
       <h2 class="h2 h2--consultation">
         Консультация
@@ -1049,42 +1050,42 @@
       <div class="menu menu--site-footer">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Немного обо мне">
+            <a href="#about_me" class="menu__link" data-name="Немного обо мне">
               Немного обо мне
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Портфолио">
+            <a href="#portfolio" class="menu__link" data-name="Портфолио">
               Портфолио
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Темы">
+            <a href="#services" class="menu__link" data-name="Темы">
               Темы
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Отзывы">
+            <a href="#reviews" class="menu__link" data-name="Отзывы">
               Отзывы
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Преимущества">
+            <a href="#benefits" class="menu__link" data-name="Преимущества">
               Преимущества
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Цены">
+            <a href="#price" class="menu__link" data-name="Цены">
               Цены
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Качество текста">
+            <a href="#about-services" class="menu__link" data-name="Качество текста">
               Качество текста
             </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link" data-name="Консультация">
+            <a href="#consultation" class="menu__link" data-name="Консультация">
               Консультация
             </a>
           </li>
@@ -1105,7 +1106,7 @@
           </a>
         </li>
         <li>
-          <a href="tal:380968404137">
+          <a href="tel:380968404137">
             <svg width="20" height="20">
               <use xlink:href="#icon-phone"></use>
             </svg>
@@ -1119,21 +1120,21 @@
         </p>
         <ul class="social__list">
           <li class="social__item">
-            <a href="#" class="" target="_blank" aria-label="Телеграм">
+            <a href="#" target="_blank" aria-label="Телеграм">
               <svg width="35" height="35">
                 <use xlink:href="#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="" target="_blank" aria-label="Вотсап">
+            <a href="#" target="_blank" aria-label="Вотсап">
               <svg width="35" height="35">
                 <use xlink:href="#icon-whatsapp"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a href="#" class="" target="_blank" aria-label="Фейсбук">
+            <a href="#" target="_blank" aria-label="Фейсбук">
               <svg width="35" height="35">
                 <use xlink:href="#icon-facebook"></use>
               </svg>
@@ -1149,24 +1150,26 @@
     <h2 class="h2 h2--modal">
       Оформление заявки
     </h2>
-    <p class="modal__item">
-      <label for="request_name" class="visually-hidden">
-        Имя
-      </label>
-      <input type="email" name="request_name" class="modal__input" id="request_name" placeholder="Имя">
-    </p>
-    <p class="modal__item">
-      <label for="request_phone" class="visually-hidden">
-        Имя
-      </label>
-      <input type="tel" name="request_phone" class="modal__input" id="request_phone" placeholder="Номер">
-    </p>
-    <p class="modal__item modal__item--submit">
-      <button type="submit" class="button button--submit-modal">
-        Отправить
-      </button>
-    </p>
-    <button type="button" class="modal__close" aria-label="Закрыть окно"></button>
+    <form>
+      <p class="modal__item">
+        <label for="request_name" class="visually-hidden">
+          Имя
+        </label>
+        <input type="email" name="request_name" class="modal__input" id="request_name" placeholder="Имя" required>
+      </p>
+      <p class="modal__item">
+        <label for="request_phone" class="visually-hidden">
+          Имя
+        </label>
+        <input type="tel" name="request_phone" class="modal__input" id="request_phone" placeholder="Номер" required>
+      </p>
+      <p class="modal__item modal__item--submit">
+        <button type="submit" class="button button--submit-modal">
+          Отправить
+        </button>
+      </p>
+      <button type="button" class="modal__close" aria-label="Закрыть окно"></button>
+    </form>
   </div>
 </div>
 <script src="js/scripts.min.js"></script>

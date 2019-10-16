@@ -7,10 +7,30 @@
   padding-bottom: 210px;
   color: @white-color;
   background-color: @aqua-color;
-  background-image: url("../img/girl.svg"), url("../img/line-gradiend-background.jpg");
-  background-size: 721px 665px, cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position: 91.5% 163px, center;
+  background-image: url("../img/line-gradiend-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefits__inner {
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    right: -191px;
+    top: -28px;
+    width: 721px;
+    height: 665px;
+    background-image: url("../img/girl.svg");
+    background-size: 721px 665px;
+    background-position: right;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
 .benefits__left {
@@ -26,12 +46,30 @@
   font-weight: 300;
 }
 
+@media (max-width: @desktop-large) {
+  .benefits__inner::after {
+    right: 0;
+  }
+}
+
 @media (max-width: @ipad-pro) {
+  .benefits__inner::after {
+    top: inherit;
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+  }
+}
+
+@media (max-width: @tablet) {
   .benefits {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-size: 360px 360px, cover;
-    background-position: 95% 70%, center;
+  }
+
+  .benefits__inner::after {
+    display: none;
   }
 }
 

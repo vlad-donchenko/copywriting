@@ -7,6 +7,19 @@
   list-style: none;
 }
 
+.social__list a {
+  display: inline-block;
+  transition: opacity @animation-duration @timing-function;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+}
+
 .social--footer {
   width: 260px;
   margin: 20px 0 0 auto;

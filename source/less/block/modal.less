@@ -10,10 +10,12 @@
   height: 100%;
   background-color: rgba(@black-color, 0.2);
   z-index: 15;
+  overflow-y: auto;
 }
 
 .modal--open {
   display: flex;
+  flex-direction: column;
 }
 
 .modal__content {
@@ -128,9 +130,28 @@
   .modal__content {
     max-width: 320px;
     padding: 30px 20px;
+    background-size: 60px 120px;
   }
 
   .modal__close {
     top: -50px;
+  }
+}
+
+@media (max-width: @mobile-l) {
+  .modal__content {
+    padding-top: 50px;
+  }
+
+  .modal__close {
+    margin: 0;
+    left: inherit;
+    right: 10px;
+    top: 15px;
+
+    &::before,
+    &::after {
+      background-color: silver;
+    }
   }
 }

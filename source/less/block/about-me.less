@@ -13,7 +13,7 @@
 .about-me__left {
   position: relative;
   width: 500px;
-  min-height: 532px;
+  height: 532px;
   padding-top: 26px;
   z-index: 1;
 }
@@ -115,5 +115,15 @@
 @media (max-width: @mobile-l) {
   .about-me__inner {
     margin-top: 80px;
+  }
+}
+
+@media (max-width: @iphone-se) {
+  .about-me__circle--large {
+    display: none;
+  }
+
+  .about-me__right {
+    margin-top: 50px;
   }
 }
