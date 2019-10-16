@@ -22,6 +22,10 @@
 }
 
 .arrows__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: width @animation-duration @timing-function;
 }
 
@@ -58,9 +62,14 @@
   right: 5px;
 }
 
-.arrows__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.slick-arrow[aria-disabled="true"] {
+  opacity: 0.3;
+  cursor: not-allowed;
+
+  &:focus {
+    .arrows__icon {
+      width: 27px;
+      height: 27px;
+    }
+  }
 }

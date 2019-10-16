@@ -51,3 +51,23 @@
 .statistics__item--end {
   width: 177px;
 }
+
+@media (max-width: @mobile-horizontal) {
+  .statistics__item {
+    margin: 20px 0 0 0 ;
+    width: 50%;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: @mobile) {
+  .benefits {
+    background-image: url(../img/line-gradiend-background.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}

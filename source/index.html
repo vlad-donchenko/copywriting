@@ -8,24 +8,25 @@
   <link rel="preload" href="fonts/gilroylight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/gilroymedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/gilroysemibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/gilroyregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <div style="display: none">
   <include src="build/img/sprite.svg"></include>
 </div>
-<header class="site-header">
+<header class="site-header site-header--no-js">
   <div class="site-header__wrap">
     <div class="container site-header__inner">
       <div class="logo logo--header">
         <img src="img/logo.svg" width="151" height="55" alt="Логотип">
       </div>
-      <nav class="menu menu--header">
-        <button type="button" class="menu__toggle" aria-label="открыть меню">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <button type="button" class="site-header__menu-toggle" aria-label="открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu menu--header menu--no-js">
         <ul class="menu__list">
           <li class="menu__item">
             <a href="#about_me" class="menu__link" data-name="Немного обо мне">
@@ -667,9 +668,7 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
+                  <img src="img/review-man.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
@@ -686,9 +685,7 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
+                  <img src="img/review-girl.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
@@ -704,9 +701,7 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
+                  <img src="img/review-girl.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
@@ -723,9 +718,7 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
+                  <img src="img/review-man.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
@@ -741,9 +734,7 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
+                  <img src="img/review-man.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
@@ -760,9 +751,7 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
+                  <img src="img/review-girl.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
@@ -778,328 +767,12 @@
             <div class="reviews__content">
               <div class="reviews__header">
                 <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
+                  <img src="img/review-man.svg" width="124" height="95" alt="Аватар пользователя">
                 </div>
                 <p class="reviews__text">
                   Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
                   человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
                   специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-man"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Екатерина профессиональный автор, который хорошо владеет приемами SEO-адаптации текста с сохранением
-                  человеческого языка, а также обладает собственным стилем. Это при том, что мы работаем с весьма
-                  специфической тематикой (оборудование для автосервиса).
-                </p>
-              </div>
-              <p class="reviews__author">
-                Марина Высоцкая, частный заказчик
-              </p>
-            </div>
-          </div>
-          <div class="reviews__item">
-            <div class="reviews__content">
-              <div class="reviews__header">
-                <div class="reviews__avatar">
-                  <svg width="124" height="93">
-                    <use xlink:href="#icon-review-girl"></use>
-                  </svg>
-                </div>
-                <p class="reviews__text">
-                  Отличная работа! Грамотный, интересный и качественный seo-текст, который легко читается. Вы - очень
-                  талантливый автор! Большое спасибо!
                 </p>
               </div>
               <p class="reviews__author">
@@ -1335,15 +1008,14 @@
               <label for="consultation_questions" class="visually-hidden">
                 Ваша почта:
               </label>
-              <input type="text" class="consultation__input" name="consultation_questions" id="consultation_questions"
-                     placeholder="Напишите свой вопрос">
-              <a href="#" class="button button--consultation" aria-label="Открыть попап">
+              <input type="text" class="consultation__input" minlength="5" name="consultation_questions" id="consultation_questions" placeholder="Напишите свой вопрос">
+              <a href="#modal_consultation" class="button button--consultation" aria-label="Открыть попап" >
                 <svg width="30" height="30">
                   <use xlink:href="#icon-consultation"></use>
                 </svg>
               </a>
             </div>
-            <div class="modal modal--consultation">
+            <div class="modal modal--consultation" id="modal_consultation">
               <div class="modal__content">
                 <h2 class="h2 h2--modal">
                   Отправить вопрос
@@ -1352,7 +1024,7 @@
                   <label for="consultation_email" class="visually-hidden">
                     Ваш E-mail
                   </label>
-                  <input type="email" name="consultation_name" class="modal__input" id="consultation_email" placeholder="Ваш E-mail">
+                  <input type="email" name="consultation_name" class="modal__input" id="consultation_email" placeholder="Ваш E-mail" required>
                 </p>
                 <p class="modal__item modal__item--submit">
                   <button type="submit" class="button button--submit-modal">
@@ -1487,7 +1159,7 @@
       <label for="request_phone" class="visually-hidden">
         Имя
       </label>
-      <input type="tel" name="request_phone" class="modal__input" id="request_phone" placeholder="Имя">
+      <input type="tel" name="request_phone" class="modal__input" id="request_phone" placeholder="Номер">
     </p>
     <p class="modal__item modal__item--submit">
       <button type="submit" class="button button--submit-modal">

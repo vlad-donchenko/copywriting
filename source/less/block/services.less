@@ -105,3 +105,30 @@
     line-height: normal;
   }
 }
+
+@media (max-width: @mobile-horizontal) {
+  .services__item {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: @mobile-l) {
+  .services__item {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    border: none;
+
+    &:nth-child(odd) {
+      border: none;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

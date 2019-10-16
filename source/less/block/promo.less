@@ -82,3 +82,47 @@
     text-align: center;
   }
 }
+
+@media (max-width: @mobile) {
+  .promo__inner {
+    padding-top: 533px;
+    margin-top: 25px;
+
+    &::after {
+      width: 100%;
+      left: 0;
+      background-position: center;
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: @mobile-l) {
+  .promo__inner::after {
+    display: none;
+  }
+
+  .promo__inner {
+    padding-top: 420px;
+    background-image: url(../img/girl.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+
+  .promo__left {
+    background-color: @white-color;
+  }
+}
+
+@media (max-width: @iphone) {
+  .promo__inner {
+    padding-top: 385px;
+  }
+}
+
+@media (max-width: @iphone-se) {
+  .promo__inner {
+    padding-top: 340px;
+  }
+}

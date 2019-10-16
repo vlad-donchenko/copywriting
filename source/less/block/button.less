@@ -85,6 +85,7 @@
   position: absolute;
   top: 21px;
   right: 37px;
+  pointer-events: none;
 }
 
 .button--submit-modal {
@@ -92,8 +93,29 @@
 }
 
 @media (max-width: @ipad-pro) {
-.button--request {
-  padding-left: 25px;
-  padding-right: 25px;
+  .button--request {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
+
+@media (max-width: @mobile-horizontal) {
+  .button--consultation {
+    height: 50px;
+  }
+
+  .button--consultation svg {
+    top: 11px;
+  }
+}
+
+@media (max-width: @mobile-l) {
+  .button--consultation {
+    width: 60px;
+  }
+
+  .button--consultation svg {
+    top: 11px;
+    right: 20px;
+  }
 }

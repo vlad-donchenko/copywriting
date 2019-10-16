@@ -18,6 +18,9 @@ html {
 }
 
 body {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
   font-family: @base-font-family;
   font-size: @base-font-size;
   letter-spacing: @base-letter-spacing;
@@ -26,12 +29,17 @@ body {
   background-color: @white-color;
   background-image: url("../img/decor-top-left.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 330px 365px;
   background-position: 0 0;
 }
 
 img {
   max-width: 100%;
+  height: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 @media (max-width: @ipad-pro) {

@@ -41,6 +41,14 @@
   padding-top: 7px;
 }
 
+.site-header__menu-toggle {
+  display: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 @keyframes navbarfiexd {
   0% {
     transform: translateY(-100%);
@@ -67,6 +75,96 @@
 
 @media (max-width: @tablet) {
   .site-header--fixed .menu--header {
-    padding-top: 11px;
+    padding-top: 50px;
+  }
+
+  .site-header__inner {
+    flex-wrap: wrap;
+  }
+
+  .site-header__menu-toggle {
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    display: block;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    transform: translateX(-50%);
+  }
+
+  .site-header__menu-toggle span {
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: @violet-color;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .site-header__menu-toggle--open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header__menu-toggle--open span:nth-child(1) {
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+
+  .site-header__menu-toggle--open span:nth-child(3) {
+    top: -7px;
+    transform: rotate(45deg);
+  }
+
+  .site-header--fixed .site-header__menu-toggle {
+    top: 11px;
+  }
+
+  .site-header--menu-open .site-header__wrap {
+    position: fixed;
+    width: 100%;
+    background-color: @white-color;
+    z-index: 10;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .site-header--no-js .site-header__menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile) {
+  .site-header__request {
+    display: none;
+    order: 2;
+    width: 100%;
+    padding-top: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .site-header__menu-toggle {
+    position: static;
+    margin-top: 20px;
+    margin-left: auto;
+    left: inherit;
+    right: 0;
+    transform: none;
+  }
+
+  .site-header--menu-open .site-header__request {
+    display: block;
+  }
+
+  .site-header--fixed .site-header__menu-toggle {
+    margin-top: 11px;
   }
 }

@@ -87,7 +87,12 @@
   background-image: url(../img/consultation-background.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 71px -5px
+  background-position: 71px -5px;
+}
+
+.consultation__input--error {
+  background-color: rgba(red, 0.3);
+  color: @white-color;
 }
 
 @media (max-width: @ipad-pro) {
@@ -109,5 +114,39 @@
     margin: 0;
     width: 100%;
     padding-bottom: 225px;
+  }
+
+  .consultation__input {
+    height: 50px;
+  }
+}
+
+@media (max-width: @mobile) {
+  .consultation__background {
+    background-position: bottom center;
+  }
+
+  .consultation__wrapper {
+    padding-top: 0;
+    padding-bottom: 270px;
+  }
+}
+
+@media (max-width: @mobile-l) {
+  .consultation__input {
+    padding-left: 20px;
+    padding-right: 75px;
+  }
+}
+
+@media (max-width: @mobile-l) {
+  .consultation__wrapper {
+    padding-bottom: 220px;
+  }
+}
+
+@media (max-width: @iphone-se) {
+  .consultation__wrapper {
+    padding-bottom: 170px;
   }
 }
